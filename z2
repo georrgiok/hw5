@@ -1,0 +1,20 @@
+// Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму четных элементов, стоящих на нечётных позициях (позиция - индекс элемента в массиве).
+
+Console.WriteLine("Введите длину массива");
+int dlina= Convert.ToInt32(Console.ReadLine()); 
+int [] num = new int [dlina];
+int summ = 0 ;
+  for (int i = 0; i < num.Length; i++ )
+    {
+        num[i] = new Random().Next(1, 10000); 
+
+        if (num [i] % 2 == 0 & (i+1) % 2 != 0)
+        {
+            Console.Write("|" +num [i] + "|");
+            summ = summ + num[i] ;
+        }
+        else Console.Write(" " +num[i] + " ");
+
+    }
+      Console.WriteLine ("сумму четных элементов, стоящих на нечётных позициях :"+ summ);
