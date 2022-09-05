@@ -1,0 +1,17 @@
+//  Задайте массив заполненный случайными положительными трёхзначными числами. 
+// Напишите программу, которая покажет количество чётных чисел в массиве.
+Console.WriteLine("Введите длину массива");
+int dlina= Convert.ToInt32(Console.ReadLine()); 
+int [] num = new int [dlina];
+int summ = 0 ;
+  for (int i = 0; i < num.Length; i++ )
+    {
+        num[i] = new Random().Next(100, 1000); 
+        Console.Write(num[i] + "       ");
+        if (num [i] % 2 == 0 )
+        {
+        summ++;
+        }
+  
+    }
+      Console.WriteLine ("количество чётных чисел в массиве:"+ summ); 
